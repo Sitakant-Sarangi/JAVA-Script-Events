@@ -87,5 +87,6 @@
                 alert('You clicked: ' + event.target.textContent);
                 // Perform any additional logic here, such as updating other parts of the UI
                 event.target.style.backgroundColor = 'pink'; // Highlight the clicked item
+             
             }
         });
