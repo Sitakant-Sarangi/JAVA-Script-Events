@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVA Script Events</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Click the Button!</h1>
+  
+    <button onclick="alert('You clicked the button!')">Click me</button>
+ <button onclick="alert('Button clicked (Inline Method)');">Click me (Inline)</button>
+
+    <button id="clickButton">Click me (Listener)</button>
+   
+    <button id="dblclickButton">Double Click me (Listener)</button>
+    <button id="hoverBtn">Hover Me</button>
+    <p id="mouseMsg"></p>
+
+   
+    <div onmouseenter="this.style.backgroundColor = 'rgb(75, 190, 228)';" onmouseleave="this.style.backgroundColor = 'transparent'; "style="padding: 20px; border: 4px solid #000;">
+        Hover over me (Inline)
+    </div>
+
+    </div>
+   
+    <div id="hoverDiv" style="padding: 20px; margin-top: 20px; border: 4px solid #000;">
+        Hover over me (Listener)
+    </div>
+
+<input type="text" id="textInput" 
+           onkeydown="console.log('Key Down: ' + event.key)"
+           onkeypress="console.log('Key Press: ' + String.fromCharCode(event.charCode))"
+           onkeyup="console.log('Key Up: ' + event.key)">
+
+
+
+           <form id="myForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username">
+        
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+            <option value="active">Active</option>
+            <option value="inactive">Inactive</option>
+            <option value="pending">Pending</option>
+        </select>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+ <label for="ageInput">Enter your age:</label>
+    <input type="text" id="ageInput" onblur="validateAge()">
+<h2>Click an Item:</h2>
+    <ul id="itemList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+</body>
+</html>
